@@ -1,0 +1,28 @@
+%h1 Welcome to Stock Diversity.
+
+#desc 
+  %h2 What is this?
+   
+  %p 
+    Stock Diversity is a database for fly labs to keep track of the stocks
+    they carry. It also allows collaborating labs easy access to your public
+    collection of stocks that they could request.
+    
+  %p
+    A memorandum of the wager was at once drawn up and signed by the six parties, during which Phileas Fogg preserved a stoical composure. He certainly did not bet to win, and had only staked the twenty thousand pounds, half of his fortune, because he foresaw that he might have to expend the other half to carry out this difficult, not to say unattainable, project. As for his antagonists, they seemed much agitated; not so much by the value of their stake, as because they had some scruples about betting under conditions so difficult to their friend.
+    
+  %p
+    The clock struck seven, and the party offered to suspend the game so that Mr. Fogg might make his preparations for departure.
+
+#signin
+  %h2 Sign In 
+  
+  %form{ :method => "post", :action => "/loggedin"}
+    #overlay username
+    %input{:type => "text"} 
+    #overlay password
+    %input{:type => "password"} 
+  
+    %input{:type => "submit"}
+  
+  %p * Registration by invitation only.

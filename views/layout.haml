@@ -1,0 +1,24 @@
+!!! -# doctype
+%html
+  %head
+    %title= @title
+    %meta{:name => "Content-Type",
+      :content => "text/html;charset=UTF-8"}
+    %link{:rel => "stylesheet", 
+      :type => "text/css", 
+      :href => "/style.css"}
+    %link{:href => "//fonts.googleapis.com/css?family=Vollkorn:regular,italic,bold,bolditalic&subset=latin",
+      :rel => "stylesheet",
+      :type => "text/css"}
+    %link{:href => "//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic&subset=latin",
+      :rel => "stylesheet",
+      :type => "text/css"}
+    
+  %body
+    #container
+      = yield 
+      #footer
+        &copy; 2010 
+        %a{:href => "/"} StockDiversity.com 
+        · Created by 
+        %a{:href => "http://milespomeroy.com"} Miles Pomeroy
