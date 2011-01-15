@@ -20,8 +20,13 @@ get '/loggedin' do
 end
 
 get '/detail' do
-  @title = "Stock Diversity &mdash; Detail"
+  @title = "cvP51P/FM7"
   haml :detail
+end
+
+get '/edit' do
+  @title = "Edit (125) &mdash; cvP51P/FM7"
+  haml :edit
 end
 
 get '/style.css' do

@@ -1,0 +1,27 @@
+%p
+  %a{ :href => '/detail' } &laquo; Back to Detail
+  
+%h1 Edit Stock 125 &mdash; cvP51P/FM7
+
+%form
+  %label Genotype
+  %input
+  %label Stock Number
+  %input
+  %label Lethality
+  %select
+    %option 
+    %option Dead
+    %option Nearly Dead
+  // Source to be a type-ahead
+  %label Source
+  %input
+  %label Chromosomes Affected
+  %input{ :type => "checkbox" }
+  %input{ :type => "checkbox" }
+  %input{ :type => "checkbox" }
+  %input{ :type => "checkbox" }
+  %label Description
+  %textarea
+  %label References
+  %input
