@@ -19,7 +19,10 @@ get '/loggedin' do
   haml :index
 end
 
-
+get '/detail' do
+  @title = "Stock Diversity &mdash; Detail"
+  haml :detail
+end
 
 get '/style.css' do
   content_type 'text/css', :charset => 'utf-8'
