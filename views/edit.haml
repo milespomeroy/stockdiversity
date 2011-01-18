@@ -3,11 +3,11 @@
   
 %h1 Edit Stock 125 &mdash; cvP51P/FM7
 
-%form
+%form.edit
   %label Genotype
-  %input
+  %input{ :type => "text" }
   %label Stock Number
-  %input
+  %input{ :type => "text" }
   %label Lethality
   %select
     %option 
@@ -15,13 +15,23 @@
     %option Nearly Dead
   // Source to be a type-ahead
   %label Source
-  %input
+  %input{ :type => "text" }
+  
   %label Chromosomes Affected
-  %input{ :type => "checkbox" }
-  %input{ :type => "checkbox" }
-  %input{ :type => "checkbox" }
-  %input{ :type => "checkbox" }
+  #chromos
+    X
+    %input{ :type => "checkbox" }
+    Y
+    %input{ :type => "checkbox" }
+    2
+    %input{ :type => "checkbox" }
+    3
+    %input{ :type => "checkbox" }
+    4
+    %input{ :type => "checkbox" }
+    
   %label Description
   %textarea
-  %label References
-  %input
+  
+  %a.ref{ :href => "#" }Add References
+  %input{ :type => "submit", :value => "Save Changes"}
