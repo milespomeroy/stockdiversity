@@ -2,7 +2,23 @@ require 'rubygems'
 require 'sinatra'
 require 'haml'
 require 'sass'
+require 'sequel' # also need pg or postgres gems
 
+DB = Sequel.connect(
+  :adapter => 'postgres',
+  :host => 'localhost',
+  :port => 5432,
+  :database => 'miles',
+  :user => 'miles',
+  :password => 'michellerocks',
+  :default_schema => 'miles'
+)
+
+# Models TODO: separate out later
+class User < Sequel::Model
+end
+
+# Controller
 get '/' do
   @title = "Stock Diversity"
   haml :login
@@ -16,6 +32,7 @@ end
 # TODO: use this when logged in
 get '/loggedin' do
   @title = "Stock Diversity"
+  @user = User.first #testing
   haml :index
 end
 
